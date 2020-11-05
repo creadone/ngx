@@ -1,0 +1,20 @@
+name: ngx
+version: 0.1.0
+
+description: NGINX access.log filter by fields with output to JSON or plain text
+
+authors:
+  - Sergey Fedorov <creadone@gmail.com>
+
+targets:
+  ngx:
+    main: src/ngx.cr
+
+crystal: 0.35.1
+
+license: MIT
+
+dependencies:
+  commander:
+    github: mrrooijen/commander
+    version: ~> 0.3.5
