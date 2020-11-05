@@ -1,7 +1,7 @@
 name: ngx
 version: 0.1.0
 
-description: NGINX access.log filter by fields with output to JSON or plain text
+description: NGINX access.log parser and filter by fields with output to JSON or plain text
 
 authors:
   - Sergey Fedorov <creadone@gmail.com>

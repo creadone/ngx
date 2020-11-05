@@ -12,9 +12,13 @@ Pre-alpha, don't use on production.
 
 ## Usage
 
-The main difference between the `filter` and `find` that the filter returns only subset of the fields and nothing more, and the `find` can compare by value of fields but always returns all fields.
+The main difference between the `filter` and `find` that the `filter` returns only subset of the fields and nothing more, and the `find` can compare by value of fields but always returns all fields.
 
 ### Finder mode
+
+**Fields**
+
+ip, user, day, month, year, hour, minute, second, timezone, method, path, protocol, version, code, bytes, referer, user_agent
 
 **Input logs**
 ```
@@ -30,9 +34,9 @@ cat access.log | ngx -m find -f ip=127.0.0.1, method=GET -o json
 
 **Output**
 ```
-{"ip":"127.0.0.1","user":"-","day":"30","month":"Oct","year":"2020","hour":"10","minute":"27","second":"00","timezone":"+0000","method":"GET","path":"/","protocol":"HTTP","version":"1.0","code":"200","bytes":"2205","referer":"-","user_agent":"ApacheBench/2.3"}
-{"ip":"127.0.0.1","user":"-","day":"30","month":"Oct","year":"2020","hour":"10","minute":"27","second":"00","timezone":"+0000","method":"GET","path":"/","protocol":"HTTP","version":"1.0","code":"200","bytes":"2205","referer":"-","user_agent":"ApacheBench/2.3"}
-{"ip":"127.0.0.1","user":"-","day":"30","month":"Oct","year":"2020","hour":"10","minute":"27","second":"00","timezone":"+0000","method":"GET","path":"/","protocol":"HTTP","version":"1.0","code":"200","bytes":"2205","referer":"-","user_agent":"ApacheBench/2.3"}
+{"ip":"127.0.0.1","user":"-","day":"30","month":"Oct","year":"2020","hour":"10","minute":"27","second":"00","timezone":"+0000","method":"GET","path":"/","protocol":"HTTP","version":"1.1","code":"200","bytes":"2205","referer":"-","user_agent":"ApacheBench/2.3"}
+{"ip":"127.0.0.1","user":"-","day":"30","month":"Oct","year":"2020","hour":"10","minute":"27","second":"00","timezone":"+0000","method":"GET","path":"/","protocol":"HTTP","version":"1.1","code":"200","bytes":"2205","referer":"-","user_agent":"ApacheBench/2.3"}
+{"ip":"127.0.0.1","user":"-","day":"30","month":"Oct","year":"2020","hour":"10","minute":"27","second":"00","timezone":"+0000","method":"GET","path":"/","protocol":"HTTP","version":"1.1","code":"200","bytes":"2205","referer":"-","user_agent":"ApacheBench/2.3"}
 ```
 
 ### Filter mode
